@@ -4,7 +4,7 @@ import operators
 def seasonal_mean(esm_catalog_json, query, name='seasonal_mean', center_time=True, kwargs={}):
     """
     Instantiate a `funnel.Collection` object for computing 
-    global mean, annual mean timeseries.
+    seasonal average.
     """
     
     postproccess = [operators.seasonal_average] 
@@ -26,7 +26,7 @@ def seasonal_mean(esm_catalog_json, query, name='seasonal_mean', center_time=Tru
 def annual_mean(esm_catalog_json, query, name='annual_mean', center_time=True, kwargs={}):
     """
     Instantiate a `funnel.Collection` object for computing 
-    global mean, annual mean timeseries.
+    annual mean timeseries.
     """
     
     postproccess = [operators.annual_average] 

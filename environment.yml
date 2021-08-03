@@ -1,0 +1,11 @@
+name: cesm-collections-dev
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - jupyterlab>=3
+  - xarray
+  - dask
+  - pip
+  - pip:
+        - -r requirements.txt

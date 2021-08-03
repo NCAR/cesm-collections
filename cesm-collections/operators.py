@@ -1,4 +1,4 @@
-from geocat.comp import climatology
+from geocat.comp.climatology import calendar_average
 
 def _get_tb_name_and_tb_dim(ds):
     """return the name of the time 'bounds' variable and its second dimension"""
@@ -23,6 +23,9 @@ def center_time(ds):
 
 def seasonal_average(ds):
     """Calculate a seasonal average"""
-    return climatology(ds, 'season', climatology=True, calendar='noleap')
-    
+    return calendar_average(ds, 'season', climatology=True, calendar='noleap')
+
+def annual_average(ds):
+    """Caclulate an annual average"""
+    return calendar_average(ds, 'year', climatology=False, calendar='noleap')
 

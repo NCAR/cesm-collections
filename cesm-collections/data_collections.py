@@ -11,7 +11,7 @@ def seasonal_mean(esm_catalog_json, query, name='seasonal_mean', center_time=Tru
     postproccess_kwargs = [{}]    
     
     if center_time:
-        postproccess = [ops.center_time] + postproccess
+        postproccess = [operators.center_time] + postproccess
         postproccess_kwargs = [{}] + postproccess_kwargs
 
     return Collection(

@@ -2,10 +2,14 @@ name: cesm-collections-dev
 channels:
   - conda-forge
   - nodefaults
+  - ncar
 dependencies:
   - jupyterlab>=3
   - xarray
   - dask
+  - intake-esm
+  - geocat-comp
+  - cf_xarray
   - pip
   - pip:
         - -r requirements.txt

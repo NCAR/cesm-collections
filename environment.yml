@@ -10,6 +10,9 @@ dependencies:
   - intake-esm
   - geocat-comp
   - cf_xarray
+  - prefect
+  - intake-esm
+  - pytest
   - pip
   - pip:
         - -r requirements.txt

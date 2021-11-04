@@ -1,2 +1,9 @@
+cf_xarray
 ecgtools
-git+https://github.com/NCAR/esds-funnel.git
+netCDF4
+typer
+xarray
+pyyaml
+pydantic
+pandas
+dask

@@ -13,6 +13,8 @@ dependencies:
   - prefect
   - intake-esm
   - pytest
+  - pytest-cov
+  - metpy
   - pip
   - pip:
         - -r requirements.txt

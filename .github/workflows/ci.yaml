@@ -44,7 +44,7 @@ jobs:
           activate-environment: cesm-collections-dev
           auto-update-conda: false
           python-version: ${{ matrix.python-version }}
-          environment-file: ci/environment.yml
+          environment-file: environment.yml
 
       - name: Set up conda environment
         run: |

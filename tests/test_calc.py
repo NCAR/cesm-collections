@@ -2,7 +2,7 @@ import pytest
 import os
 import pathlib
 import xarray as xr
-from cesm_collections import calc
+from esm_collections import calc
 
 sample_data_dir = pathlib.Path(os.path.dirname(__file__)).parent / 'data'
 

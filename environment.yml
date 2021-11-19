@@ -1,4 +1,4 @@
-name: cesm-collections-dev
+name: esm-collections-dev
 channels:
   - conda-forge
   - nodefaults

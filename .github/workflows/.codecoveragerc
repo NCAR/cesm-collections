@@ -1,4 +1,6 @@
 [run]
 omit =
+    notebooks/*
+    esm_collections/*.ipynb
     tests/*.py
     setup.py

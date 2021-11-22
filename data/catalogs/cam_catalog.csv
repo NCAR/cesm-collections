@@ -1,0 +1,13 @@
+component,stream,date,case,member_id,frequency,variables,path
+atm,cam.h0,2035-01,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-01.nc
+atm,cam.h0,2035-02,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-02.nc
+atm,cam.h0,2035-03,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-03.nc
+atm,cam.h0,2035-04,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-04.nc
+atm,cam.h0,2035-05,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-05.nc
+atm,cam.h0,2035-06,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-06.nc
+atm,cam.h0,2035-07,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-07.nc
+atm,cam.h0,2035-08,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-08.nc
+atm,cam.h0,2035-09,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-09.nc
+atm,cam.h0,2035-10,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-10.nc
+atm,cam.h0,2035-11,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-11.nc
+atm,cam.h0,2035-12,b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001,001,month_1,"['T', 'U', 'V', 'Q']",data/cam/b.e21.BW.f09_g17.SSP245-TSMLT-GAUSS-LOWER-0.5.001.cam.h0.2035-12.nc

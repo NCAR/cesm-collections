@@ -16,6 +16,7 @@ dependencies:
   - pytest-cov
   - pop-tools
   - metpy
+  - xhistogram
   - pip
   - pip:
         - -r requirements.txt

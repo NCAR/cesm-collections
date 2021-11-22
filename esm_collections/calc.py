@@ -1,5 +1,7 @@
 import pop_tools
 import xarray as xr
+import numpy as np
+from xhistogram.xarray import histogram
 
 
 def _get_tb_name_and_tb_dim(ds):

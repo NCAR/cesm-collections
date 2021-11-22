@@ -9,6 +9,7 @@ dependencies:
   - dask
   - intake-esm
   - geocat-comp
+  - graphviz
   - cf_xarray
   - prefect
   - intake-esm
@@ -20,3 +21,4 @@ dependencies:
   - pip
   - pip:
         - -r requirements.txt
+        - git+https://github.com/NCAR/xcollection

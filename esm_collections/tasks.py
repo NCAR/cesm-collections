@@ -1,8 +1,9 @@
 import os
 from prefect import task
 import intake
-import calc
 import xcollection
+
+from . import calc
 
 
 # Deal with Intake-ESM catalogs

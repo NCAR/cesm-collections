@@ -51,19 +51,3 @@ def global_integral(ds, horizontal_dims, area_field, land_sea_mask, time_dim, in
 @task
 def zonal_average(da, grid, lat_field, ydim, xdim, lat_axis, region_mask=None):
     return calc.zonal_mean(da=da, grid=grid, lat_field=lat_field, ydim=ydim, xdim=xdim, lat_axis=lat_axis, region_mask=region_mask)
-
-@task
-def cache_result(collection, operation, cache_dir, cache_format='zarr'):
-    if not os.path.exists(cache_dir):
-        os.makedirs(cache_dir)
-        
-    for key in collection.keys():
-        cache_path = f'{cache_dir}/{operation}/{key}.{operation}.{cache_format}'
-        dso = collection[key]
-        dso['member_id'] = key
-        dso = dso.expand_dims('member_id')
-        if cache_format == 'zarr':
-            collection[key].to_zarr(cache_path, mode='w')
-            
-        elif cache_format == 'netcdf':
-            collection[key].to_netcdf(cache_path, mode='w')

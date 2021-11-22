@@ -2,6 +2,7 @@ import pop_tools
 import xarray as xr
 import numpy as np
 from xhistogram.xarray import histogram
+import geocat.comp
 
 
 def _get_tb_name_and_tb_dim(ds):
@@ -131,3 +132,17 @@ def zonal_mean(da_in, grid, lat_axis=None, lat_field='geolat', ydim='yh', xdim='
     
     # Return the zonal average, renaming the variable to the variable in
     return da_out
+
+def temporal_average(ds, time_dim='time'):
+    time_variable_dims = []
+    for var in ds:
+        if time_dim in ds[var].dims:
+            time_variable_dims.append(var)
+    return ds[time_variable_dims].mean(dim='time')
+
+def yearly_average(ds, time_dim='time'):
+    time_variable_dims = []
+    for var in ds:
+        if time_dim in ds[var].dims:
+            time_variable_dims.append(var)
+    return geocat.comp.climatologies.climatology(ds[time_variable_dims], "year", time_dim)

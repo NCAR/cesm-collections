@@ -2,6 +2,7 @@ import pytest
 import os
 import pathlib
 import xarray as xr
+import numpy as np
 from esm_collections import calc
 
 sample_data_dir = pathlib.Path(os.path.dirname(__file__)).parent / 'data'
@@ -16,3 +17,5 @@ def test_center_time(data):
     ds = xr.open_dataset(data)
     ds_center_time = calc.center_time(ds)
     assert isinstance(ds_center_time, xr.Dataset)
+    assert ds.time.dt.month.values[0] == 2
+    assert ds_center_time.time.dt.month.values == 1

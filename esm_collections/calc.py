@@ -18,10 +18,13 @@ def center_time(ds):
     encoding = ds.time.encoding
     tb_name, tb_dim = _get_tb_name_and_tb_dim(ds)
     new_time = ds[tb_name].compute().mean(tb_dim).squeeze()
-    # Make sure it is a list if length 1
     if len(ds[tb_name]) == 1:
-        new_time = [new_time.values]
-    ds['time'] = new_time
+        new_time = [new_time.data]
+        ds['time'] = new_time
+        ds = ds.isel(time=0)
+    else:
+        ds['time'] = new_time
+    
     attrs["note"] = f"time recomputed as {tb_name}.mean({tb_dim})"
     ds.time.attrs = attrs
     ds.time.encoding = encoding

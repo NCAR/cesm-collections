@@ -34,7 +34,7 @@ with Flow('timeseries_collection') as timeseries_collection:
     catalog_subset = tasks.subset_catalog(data_catalog, search_dict)
     
     # Subset some number of dates
-    date_subset = tasks.subset_dates(catalog_subset, subset_times)
+    date_subset = tasks.subset_dates(catalog_subset, search_dict, subset_times)
 
     # Load the data
     dsets_subset_dates = tasks.load_data(date_subset, cdf_kwargs=cdf_kwargs)
@@ -43,9 +43,13 @@ with Flow('timeseries_collection') as timeseries_collection:
     # Convert to xcollection
     collection_subset_dates = tasks.convert_to_collection(dsets_subset_dates)
     collection_timeseries = tasks.convert_to_collection(dsets_timeseries)
+
+    # Center time
+    collection_subset_dates_center_time = tasks.center_time(collection_subset_dates)
+    collection_timeseries_center_time = tasks.center_time(collection_timeseries)
     
     # Calculate a long-term mean
-    long_term_average = tasks.long_term_mean(collection_subset_dates)
+    long_term_average = tasks.long_term_mean(collection_subset_dates_center_time)
     
     # Calculate the annual average
-    annual_average = tasks.annual_mean(collection_timeseries)
+    annual_average = tasks.annual_mean(collection_timeseries_center_time)

@@ -20,7 +20,7 @@ def test_base_flow(data_catalog, search_dict):
 @pytest.mark.parametrize(
     'data_catalog, search_dict',
     [(sample_data_dir / 'catalogs' / 'cam_catalog.json',
-     {'variables':['T']})],
+     {'variables':['T', 'time_bnds']})],
 )
 def test_timeseries_flow(data_catalog, search_dict):
     flow = flows.timeseries_collection

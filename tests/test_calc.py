@@ -33,13 +33,38 @@ def test_center_time(data):
 def test_global_mean(data, horizontal_dims, area_field, land_sea_mask, normalize, time_dim):
     ds = xr.open_dataset(data)
     grid = pop_tools.get_grid('POP_gx1v7')
-    ds = xr.merge([ds, grid[['TAREA', 'REGION_MASK']]])
+    ds = xr.merge([ds, grid[['TAREA', 'REGION_MASK', 'KMT']]])
     ds_global_mean= calc.global_mean(ds,
                                      horizontal_dims=horizontal_dims,
                                      area_field=area_field,
                                      land_sea_mask=land_sea_mask,
                                      normalize=normalize,
                                      region_mask=None,
+                                     time_dim=time_dim)
+    assert isinstance(ds_global_mean, xr.Dataset)
+
+@pytest.mark.parametrize(
+    'data, horizontal_dims, area_field, land_sea_mask, normalize, include_ms, time_dim',
+    [(sample_data_dir / 'pop' / 'pop_no_mcog.pop.h.0001-01.nc',
+     ('nlat', 'nlon'),
+     'TAREA',
+     'KMT',
+     [True, False],
+     [True, False],
+     'time')],
+)
+def test_regional_mean(data, horizontal_dims, area_field, land_sea_mask, normalize, include_ms, time_dim):
+    ds = xr.open_dataset(data)
+    grid = pop_tools.get_grid('POP_gx1v7')
+    region_mask = pop_tools.region_mask_3d('POP_gx1v7')
+    ds = xr.merge([ds, grid[['TAREA', 'REGION_MASK', 'KMT']]])
+    ds_global_mean= calc.global_mean(ds,
+                                     horizontal_dims=horizontal_dims,
+                                     area_field=area_field,
+                                     land_sea_mask=land_sea_mask,
+                                     normalize=normalize,
+                                     include_ms=include_ms,
+                                     region_mask=region_mask,
                                      time_dim=time_dim)
     assert isinstance(ds_global_mean, xr.Dataset)
 

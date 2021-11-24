@@ -17,12 +17,9 @@ def subset_catalog(catalog, search_dict):
 
 # Calculations
 @task
-def center_time(ds, model):
-    return calc.center_time(ds)
-
-@task
-def subset_dates(catalog, date_subset):
-    return catalog.search(date=catalog.df.date[date_subset].values)
+def subset_dates(catalog, search_dict, date_subset):
+    search_dict.update({'date':catalog.df.date[date_subset].values})
+    return catalog.search(**search_dict)
 
 @task
 def convert_to_collection(dsets):
@@ -31,6 +28,10 @@ def convert_to_collection(dsets):
 @task
 def load_data(catalog, cdf_kwargs):
     return catalog.to_dataset_dict(cdf_kwargs=cdf_kwargs)
+
+@task
+def center_time(collection):
+    return collection.map(calc.center_time)
 
 @task
 def long_term_mean(collection):

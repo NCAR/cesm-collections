@@ -21,6 +21,7 @@ dependencies:
   - sphinx-inline-tabs
   - xarray
   - zarr
+  - pop-tools
   - pip:
       - sphinxext-opengraph
       - autodoc_pydantic

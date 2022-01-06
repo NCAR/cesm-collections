@@ -1,0 +1,33 @@
+name: esm-collections-docs
+channels:
+  - nodefaults
+  - conda-forge
+  - ncar
+dependencies:
+  - catalogue
+  - dask
+  - fsspec
+  - furo
+  - joblib
+  - jupyterlab
+  - myst-nb
+  - netcdf4
+  - pip
+  - prefect
+  - pydantic
+  - python=3.9
+  - sphinx-autobuild
+  - sphinx-comments
+  - sphinx-copybutton
+  - sphinx-inline-tabs
+  - xarray
+  - zarr
+  - pop-tools
+  - xhistogram
+  - geocat-comp
+  - pip:
+      - sphinxext-opengraph
+      - autodoc_pydantic
+      - xcollection
+      - -r ../requirements.txt
+      - -e ..

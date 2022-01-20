@@ -9,6 +9,7 @@ class workflow_baseclass(object):
     def __init__(self):
         self.keys = None
         self.key_final_result = None
+        self.flow = None
         
     def run(self, catalog_path=None, multi_var_row=False, search_dict={}, cdf_kwargs=None, *args):
         if self.flow is None:

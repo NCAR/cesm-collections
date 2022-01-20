@@ -13,3 +13,8 @@ def test_convert_to_collection(keys=keys, dsets=dsets):
 
     assert isinstance(collection, xc.Collection)
     assert isinstance(collection['foo'], xr.Dataset)
+
+def test_workflow_baseclass():
+    workflow = workflow_baseclass()
+    assert workflow.keys == None
+    assert workflow.flow == None

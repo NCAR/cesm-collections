@@ -33,8 +33,8 @@ setup(
     long_description_content_type='text/markdown',
     include_package_data=True,
     keywords='cesm,prefect,cesm-collections',
-    name='esm-collections',
-    packages=find_packages(include=['esm-collections']),
+    name='esm_collections',
+    packages=find_packages(include=['esm_collections']),
     entry_points={},
     url='https://github.com/NCAR/esm-collections',
     project_urls={
